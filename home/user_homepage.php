@@ -127,7 +127,7 @@
             }
             $medicine_name = $_POST["msubmit"];
 
-            $sql = "SELECT medicinename,mrp,uses,alternatemedicines,sideeffect,howitwork FROM medicine WHERE medicinename = '$medicine_name'";
+            $sql = "SELECT * FROM medicine WHERE medicinename = '$medicine_name'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {

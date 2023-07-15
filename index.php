@@ -152,14 +152,14 @@
           }
           $medicine_name = $_POST["search"];
 
-          $sql = "SELECT medicinename,mrp,uses,alternatemedicines,sideeffect,howitwork FROM medicine WHERE medicinename = '$medicine_name'";
+          $sql = "SELECT * FROM medicine WHERE medicinename = '$medicine_name'";
           $result = $conn->query($sql);
 
           if ($result->num_rows > 0) {
             // output data of each row
             while ($row = $result->fetch_assoc()) {
               echo "<div style='font-size: 16px; padding:5px'>";
-              echo "<br> Name: " . $row["medicinename"] . " <br><br>MRP: " . $row["mrp"] . "<br><br>Uses:" . $row["uses"] . "<br><br>Alternate medicines:" . $row["alternatemedicines"] . "<br><br>Side effect:" . $row["sideeffect"] . "<br><br>How It Work:" . $row["howitwork"] . "<br>";
+              echo "<br> <b>Name:</b> " . $row["medicinename"] . " <br><br><b>MRP:</b> ₹" . $row["mrp"] . "<br><br><b>Uses:</b> " . $row["uses"] . "<br><br><b>Alternate medicines:</b> " . $row["alternatemedicines"] . "<br><br><b>Side effect:</b> " . $row["sideeffect"] . "<br><br><b>How It Work:</b> " . $row["howitworks"] . "<br>";
               echo "</div>";
             }
           } else {
