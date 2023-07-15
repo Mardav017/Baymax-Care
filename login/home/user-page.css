@@ -1,0 +1,555 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-roboto: Roboto;
+  --font-segoe-ui: "Segoe UI";
+
+  /* font sizes */
+  --font-size-smi: 13px;
+  --font-size-21xl: 40px;
+  --font-size-base: 16px;
+  --font-size-xl: 20px;
+  --font-size-29xl: 48px;
+  --font-size-17xl: 36px;
+  --font-size-39xl: 58px;
+  --font-size-lg: 18px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-orange: #f99a0e;
+  --color-black: #000;
+  --color-gray: rgba(0, 0, 0, 0.2);
+  --color-gainsboro: #d9d9d9;
+  --color-darkslateblue: #0d264f;
+  --color-lavenderblush: #fbeded;
+  --color-whitesmoke: #e8e9eb;
+
+  /* Gaps */
+  --gap-61xl: 80px;
+
+  /* Paddings */
+  --padding-61xl: 80px;
+  --padding-11xl: 30px;
+
+  /* border radiuses */
+  --br-3xs: 10px;
+  --br-5xs: 8px;
+  --br-xl: 20px;
+}
+
+
+
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.baymax-gives-you,
+.own-your-health {
+  position: absolute;
+  top: 17px;
+  left: 0;
+  letter-spacing: 0.46px;
+  line-height: 26px;
+}
+.baymax-gives-you {
+  top: 97px;
+  left: 2px;
+  font-size: var(--font-size-xl);
+  display: flex;
+  align-items: center;
+  width: 510px;
+}
+.own-your-health-parent {
+  position: absolute;
+  top: 235px;
+  left: 102px;
+  width: 512px;
+  height: 150px;
+  font-size: var(--font-size-29xl);
+}
+.welcome {
+  position: absolute;
+  top: 153px;
+  left: 104px;
+  font-size: var(--font-size-17xl);
+  letter-spacing: 0.46px;
+  line-height: 26px;
+}
+.search-section-child {
+  color: white;
+  font-size: medium;
+  font-weight: 600;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: var(--color-darkslateblue);
+  position: absolute;
+  top: 423px;
+  left: 102px;
+  border-radius: var(--br-5xs);
+  width: 165px;
+  height: 37px;
+}
+.icon2 {
+  position: absolute;
+  top: 76px;
+  left: 640px;
+  width: 564px;
+  height: 559px;
+  object-fit: cover;
+}
+.baymax-care,
+.make-appointment,
+.medicine-a-z,
+.prescription {
+  position: absolute;
+  margin-top: 0%;
+  padding-top: 0%;
+  top: 45px;
+  letter-spacing: 0.46px;
+  line-height: 26px;
+}
+.baymax-care {
+  left: 139px;
+  font-size: var(--font-size-xl);
+}
+a.baymax-care:visited{
+  color:rgba(0, 0, 0, 0.2) ;
+  text-decoration: none;
+}
+.make-appointment,
+.medicine-a-z,
+.prescription {
+  text-decoration: none;
+  left: 467px;
+  font-weight: 600;
+  color: inherit;
+  cursor: pointer;
+}
+.medicine-a-z,
+.prescription {
+  left: 658px;
+}
+.medicine-a-z {
+  left: 858px;
+}
+.baymax-1-icon {
+  margin-top: 0%;
+  padding-top: 0%;
+  position: absolute;
+  top: 20px;
+  left: 47px;
+  width: 75px;
+  height: 76px;
+  object-fit: cover;
+}
+.vector-icon4 {
+  position: absolute;
+  height: 5.81%;
+  width: 3.36%;
+  top: 5.43%;
+  right: 8.17%;
+  bottom: 86.76%;
+  left: 89.47%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.search-section1 {
+  align-self: stretch;
+  position: relative;
+  height: 740px;
+  flex-shrink: 0;
+}
+.first {
+  align-self: stretch;
+  background: linear-gradient(180deg, #dad6f9, rgba(218, 214, 249, 0));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: var(--font-size-lg);
+}
+.sthethosscope-1-icon {
+  position: absolute;
+  margin: 0 !important;
+  top: 41px;
+  left: 387px;
+  width: 875px;
+  height: 632px;
+  flex-shrink: 0;
+  object-fit: cover;
+  z-index: 0;
+}
+.find-your-doctor {
+  margin-block-start: 0;
+  margin-block-end: 30px;
+}
+.an-appointment {
+  margin: 0;
+}
+.find-your-doctor-container,
+.get-your-digital {
+  position: absolute;
+  margin: 0 !important;
+  top: 153px;
+  left: 111px;
+  letter-spacing: 0.46px;
+  line-height: 26px;
+  z-index: 1;
+}
+.get-your-digital {
+  top: 269px;
+  left: 116px;
+  font-size: var(--font-size-xl);
+  z-index: 2;
+}
+.form-child {
+  font-size: x-small;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background: linear-gradient(180deg, #fff, rgba(255, 255, 255, 0));
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--color-gray);
+  box-sizing: border-box;
+  width: 590px;
+  height: 108px;
+}
+.form-inner,
+.form-item {
+  border: 0;
+  position: absolute;
+  top: 19px;
+  border-radius: var(--br-5xs);
+  height: 30px;
+  font-size: x-small;
+}
+.form-item {
+  color: white;
+  font-size: medium;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  background-color: var(--color-darkslateblue);
+  left: 469px;
+  width: 95px;
+}
+.form-inner {
+  font-size: small;
+  padding: 1px;
+  padding-left: 10px;
+  background-color: var(--color-lavenderblush);
+  left: 20px;
+  width: 430px;
+}
+.form {
+  position: absolute;
+  margin: 0 !important;
+  font-size: x-small;  
+  top: 350px;
+  left: 111px;
+  width: 590px;
+  height: 108px;
+  flex-shrink: 0;
+  z-index: 3;
+}
+.appointment {
+  background-color: var(--color-white);
+  width: 100%;
+  height: 740px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--padding-61xl);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  gap: var(--gap-61xl);
+  max-width: 1280px;
+  font-size: var(--font-size-29xl);
+}
+.experience-the-freedom,
+.medicine-search1 {
+  position: absolute;
+  left: 0;
+  letter-spacing: 0.46px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  height: 64px;
+}
+.medicine-search1 {
+  top: 0;
+  width: 454px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.experience-the-freedom {
+  top: 81px;
+  font-size: var(--font-size-xl);
+  width: 489px;
+}
+.medicine-search-parent,
+.removal-1-icon {
+  position: absolute;
+  margin: 0 !important;
+  top: 161px;
+  left: 106px;
+  width: 489px;
+  height: 145px;
+  flex-shrink: 0;
+  z-index: 0;
+}
+.removal-1-icon {
+  top: 22px;
+  left: 505px;
+  width: 800px;
+  height: 703px;
+  object-fit: cover;
+  z-index: 1;
+}
+.form1,
+.rectangle-div {
+  position: absolute;
+  width: 590px;
+  height: 108px;
+}
+.rectangle-div {
+  top: 0;
+  left: 0;
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--color-gray);
+  box-sizing: border-box;
+}
+.form1 {
+  margin: 0 !important;
+  top: 381px;
+  left: 106px;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.medicine-search {
+  background-color: #6da6dd;
+  width: 100%;
+  height: 740px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--padding-61xl);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  gap: var(--gap-61xl);
+  max-width: 1280px;
+  color: var(--color-whitesmoke);
+}
+.photo-3-1 {
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  left: 0;
+  width: 1000px;
+  height: 740px;
+  flex-shrink: 0;
+  object-fit: cover;
+  z-index: 0;
+}
+.feedback1,
+.feel-free-to {
+  position: absolute;
+  left: 0;
+  letter-spacing: 0.46px;
+  line-height: 26px;
+}
+.feedback1 {
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: 260px;
+  height: 62px;
+}
+.feel-free-to {
+  top: 62px;
+  font-size: var(--font-size-xl);
+}
+.feedback-parent {
+  position: absolute;
+  margin: 0 !important;
+  top: 129px;
+  left: 703px;
+  width: 331px;
+  height: 88px;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.group-child,
+.group-inner,
+.group-item {
+  padding: 1px;
+  padding-left: 10px;
+  border: 0;
+  background-color: var(--color-gainsboro);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  width: 471px;
+  height: 41px;
+}
+.group-inner,
+.group-item {
+  top: 56px;
+}
+.group-inner {
+  color: white;
+  font-size: medium;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  background-color: var(--color-darkslateblue);
+  top: 320px;
+  border-radius: var(--br-5xs);
+  width: 95px;
+  height: 30px;
+}
+.rectangle-textarea {
+  padding: 10px;
+  border: 0;
+  background-color: var(--color-gainsboro);
+  position: absolute;
+  top: 112px;
+  left: 0;
+  border-radius: var(--br-3xs);
+  width: 460px;
+  height: 170px;
+}
+.rectangle-parent {
+  position: absolute;
+  margin: 0 !important;
+  top: 255px;
+  left: 703px;
+  width: 471px;
+  height: 350px;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.feedback {
+  background-color: #00a6c0;
+  width: 100%;
+  height: 740px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--padding-61xl);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  gap: var(--gap-61xl);
+  max-width: 1280px;
+  color: var(--color-black);
+}
+.screenshot-2023-05-03-184622-1 {
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 225.76px;
+  flex-shrink: 0;
+  object-fit: cover;
+  z-index: 0;
+}
+.baymaxcare,
+.contact-us {
+  position: absolute;
+  margin: 0 !important;
+  top: 64px;
+  left: 36px;
+  letter-spacing: 0.46px;
+  line-height: 26px;
+  display: inline-block;
+  z-index: 1;
+}
+.baymaxcare {
+  top: 92px;
+  left: 139px;
+  font-size: 12px;
+  z-index: 2;
+}
+.copyright-by-baymax,
+.footer-section-child {
+  position: absolute;
+  margin: 0 !important;
+  left: 626px;
+}
+.footer-section-child {
+  top: 72px;
+  width: 290px;
+  height: 41px;
+  flex-shrink: 0;
+  z-index: 3;
+}
+.copyright-by-baymax {
+  top: 128px;
+  font-size: var(--font-size-base);
+  letter-spacing: 0.46px;
+  line-height: 26px;
+  display: inline-block;
+  color: var(--color-black);
+  z-index: 4;
+}
+.footer-section1,
+.userpage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.footer-section1 {
+  align-self: stretch;
+  background-color: #632f2f;
+  height: 225.76px;
+  flex-shrink: 0;
+  align-items: flex-start;
+  font-size: var(--font-size-17xl);
+  color: var(--color-white);
+}
+.userpage {
+  background-color: var(--color-white);
+  width: 100%;
+  overflow: hidden;
+  align-items: center;
+  text-align: left;
+  font-size: var(--font-size-39xl);
+  color: var(--color-darkslateblue);
+  font-family: var(--font-segoe-ui);
+}
+.userpage:hover {
+  background: linear-gradient(#fff, #fff), #87550a;
+}
+@media screen and (max-width: 960px) {
+  .appointment,
+  .feedback,
+  .medicine-search {
+    padding-left: var(--padding-11xl);
+    padding-right: var(--padding-11xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 420px) {
+  .userpage {
+    width: 100%;
+  }
+  .userpage:hover {
+    background-color: var(--color-orange);
+  }
+}
