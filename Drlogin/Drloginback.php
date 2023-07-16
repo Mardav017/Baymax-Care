@@ -20,11 +20,11 @@ $conn = new mysqli('localhost','root','','signup');
                 $_SESSION['mail']=$data['mail'];
         
                 //header("Location: demo.php");
-                header("home/Doctor_Home.php");
+                header("Location:http://localhost/Baymax%20Care/Drlogin/home/Doctor_Home.php");
             }
             else{
-                header("Location:Drlogin.php");
-
+                
+                header("Location:http://localhost/Baymax%20Care/Drlogin/Drlogin.php");
                 exit();
             }
         }

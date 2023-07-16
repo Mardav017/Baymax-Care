@@ -158,6 +158,10 @@ a.baymax-care:visited{
   overflow: hidden;
   max-height: 100%;
 }
+.vector-icon4 a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
 .search-section1 {
   align-self: stretch;
   position: relative;

@@ -13,14 +13,16 @@
         <nav class="flex justify-between mt-0 mb-4 m-7 pt-5 p-2">
             <div class="flex">
                 <img class=" h-16 w-16" src="Image/baymax.png" alt="logo">
-                <h1 class="py-4 mx-3 text-xl font-bold">BayMax Care</h1>
+                <!-- <h1 class="py-4 mx-3 text-xl font-bold">BayMax Care</h1> -->
+                <a href="../index.php"<h1 class="py-4 mx-3 text-xl font-bold">BayMax Care</h1></a>
             </div>
     
             <div class="my-4 mr-5">
-            <a class="ml-96" href="http://localhost/Project/Drlogin/Drlogin.php">Log In</a>
+            <!-- <a class="ml-96" href="http://localhost/Project/Drlogin/Drlogin.php">Log In</a> -->
             </div>
     
             <div>
+            <button class='border rounded-xl p-2 bg-[#0d264f]'><a href="../Drlogin/Drlogin.php" class="text-[#fff]">Login</a></button>
         
             </div>
         </nav>

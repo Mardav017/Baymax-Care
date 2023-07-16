@@ -7,7 +7,10 @@
 
   <link rel="stylesheet" href="./index.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe UI:wght@400;600;700&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;600;700&display=swap"/>
+  
+  
+
 </head>
 
 <body>
@@ -129,51 +132,20 @@
         <img class="gx65yga-1-icon" alt="" src="./public/8gx65yga-1@2x.png" />
 
         <div class="appointment-child"></div>
-        <input class="appointment-item" name="search" type="text" placeholder="Search Medicine" />
+        <input class="appointment-item" id="medicine-search" name="msearch" type="text" placeholder="Search Medicine" autocomplete="off"/>
 
         <!-- <button class="appointment-inner"></button> -->
-        <input type="submit" class="appointment-inner" value="Search">
-        <div class="rectangle-div">
+        <input type="submit" class="appointment-inner" id="medsearch" value="Search">
+        <div class="rectangle-div" id="medresult">
 
           <?php
-
-
-          ini_set('display_errors', '1');
-          ini_set('display_startup_errors', '1');
-          error_reporting(E_ALL & ~E_WARNING);
-          // include 'dbconnection.php';
-          
-
-          // Create connection
-          $conn = new mysqli('localhost', 'root', '', 'signup');
-          // Check connection
-          if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-          }
-          $medicine_name = $_POST["search"];
-
-          $sql = "SELECT * FROM medicine WHERE medicinename = '$medicine_name'";
-          $result = $conn->query($sql);
-
-          if ($result->num_rows > 0) {
-            // output data of each row
-            while ($row = $result->fetch_assoc()) {
-              echo "<div style='font-size: 16px; padding:5px'>";
-              echo "<br> <b>Name:</b> " . $row["medicinename"] . " <br><br><b>MRP:</b> ₹" . $row["mrp"] . "<br><br><b>Uses:</b> " . $row["uses"] . "<br><br><b>Alternate medicines:</b> " . $row["alternatemedicines"] . "<br><br><b>Side effect:</b> " . $row["sideeffect"] . "<br><br><b>How It Work:</b> " . $row["howitworks"] . "<br>";
-              echo "</div>";
-            }
-          } else {
-            echo "<div style='font-size: 16px; padding:5px'>";
-            echo "0 results";
-            echo "</div>";
-          }
-
-          $conn->close();
+          include 'medicinesearch.php';
           ?>
 
 
 
 
+        
         </div>
         <b class="medicine-search">Medicine Search </b>
     </div>
@@ -226,6 +198,10 @@
       </div>
     </div>
   </div>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="suggestions.js"></script>
 </body>
 
 </html>

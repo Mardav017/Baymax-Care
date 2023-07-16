@@ -42,7 +42,8 @@
           <a href="#feed" class="feedbacks">Feedbacks</a>
           <img class="baymax-2-icon" alt="" src="./public/baymax-2@2x.png" />
 
-          <img class="vector-icon1" alt="" src="./public/vector1.svg" />
+          <!-- <img class="vector-icon1" alt="" src="./public/vector1.svg" /> -->
+          <button class="vector-icon1"><a href="../Drlogin.php"><b>Logout</b></a></button>
 
           <b class="welcome-doctor">Welcome Doctor !!</b>
         </div>
@@ -125,14 +126,14 @@
             }
             $medicine_name = $_POST["msubmit"];
 
-            $sql = "SELECT medicinename,mrp,uses,alternatemedicines,sideeffect,howitwork FROM medicine WHERE medicinename = '$medicine_name'";
+            $sql = "SELECT * FROM medicine WHERE medicinename = '$medicine_name'";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
               // output data of each row
               while ($row = $result->fetch_assoc()) {
-                echo "<div style='font-size: 12px; padding:5px'>";
-                echo "<br> Name: " . $row["medicinename"] . " <br><br>MRP: " . $row["mrp"] . "<br><br>Uses:" . $row["uses"] . "<br><br>Alternatemedicines:" . $row["alternatemedicines"] . "<br><br>Sideeffect:" . $row["sideeffect"] . "<br><br>How It Work:" . $row["howitwork"] . "<br>";
+                echo "<div style='color:black; font-size: 12px; padding:0px 5px 5px 5px'>";
+                echo "<br> <b>Name:</b> " . $row["medicinename"] . "<br><br> <b>Salts Used:</b> " . $row["salt"] ." <br><b>MRP:</b> ₹" . $row["mrp"] . "<br><b>Uses:</b> " . $row["uses"] . "<br><br><b>Alternate medicines:</b> " . $row["alternatemedicines"] . "<br><br><b>Side effect:</b> " . $row["sideeffect"] ."<br> <b>How to Use: </b> " . $row["howtouse"] . "<br><br><b>How It Work:</b> " . $row["howitworks"] . "<br>";
                 echo "</div>";
               }
             } else {
@@ -164,7 +165,7 @@
           ini_set('display_startup_errors', '1');
           error_reporting(E_ALL & ~E_WARNING);
 
-          include 'dbconnection.php';
+          // include 'dbconnection.php';
 
 
           // Create connection
@@ -174,19 +175,21 @@
             die("Connection failed: " . $conn->connect_error);
           }
 
-          $sql = "SELECT nam,contact_number,feedback FROM feedbacks";
+          $sql = "SELECT * FROM feedbacks";
           $result = $conn->query($sql);
           if ($result->num_rows > 0) {
             // output data of each row
             while ($row = $result->fetch_assoc()) {
-              echo "<div style='font-size: 16px; padding:5px; padding-left:50px; color: #000; '>";
+              echo "<div style='font-size: 12px; padding:5px; padding-left:50px; color: #000; '>";
               echo "<br><b> Name:</b> " . $row["nam"] . "<b style='padding-left:10px;'> Phone: </b>" . $row["contact_number"]."<br><b> FeedBack: </b>". $row["feedback"];
               echo "</div>";
             }
           } else {
-            echo "0 results";
+            echo "<div style='font-size: 16px; padding:10px; padding-left:50px; color: #000; '>";
+            echo "No Feedback Found";
+            echo "</div>";
           }
-
+          
           $conn->close();
           ?>
 

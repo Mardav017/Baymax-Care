@@ -27,19 +27,20 @@
           
           <img class="icon2" alt="" src="./public/12-1@2x.png" />
 
-          <a href="#home"><b class="baymax-care">BayMax Care</b></a>
-          <a href="#" class="make-appointment">Prescription</a>
+          <b class="baymax-care">BayMax Care</b>
+          <a href="#app" class="make-appointment">Prescription</a>
           <a href="#feed" class="medicine-a-z">Feedback</a>
           <!-- <a href="#feed" class="feedback">Feedback</a> -->
           <a href="#med" class="prescription">Medicine A-Z</a>
           <img class="baymax-1-icon" alt="" src="./public/baymax-1@2x.png" />
 
-          <img class="vector-icon4" alt="" src="./public/vector4.svg" />
+          <!-- <img class="vector-icon4" alt="" src="./public/vector4.svg" /> -->
+          <button class="vector-icon4"><a href="../login.php">Logout</a></button>
         </div>
       </div>
       <div id="app" class="appointment">
         <img class="sthethosscope-1-icon" alt="" src="./public/sthethosscope-1@2x.png" />
-
+        <form action="#" method="POST">
         <div class="find-your-doctor-container">
           <p class="find-your-doctor">Find your doctor & make</p>
           <p class="an-appointment">
@@ -106,45 +107,46 @@
           <!-- <button class="form-item"></button> -->
           <input type="submit" class="form-item"  value="Search"
             onclick="document.getElementsByClassName('form1,rectangle-div').style.height = '360px';">
-          <input id="med" class="form-inner" name="msubmit" type="text" placeholder="Search Medicine" />
+          <input id="medicine-search" class="form-inner" name="msearch" type="text" placeholder="Search Medicine" />
           <div style="height:50px; width:900px;margin-left:20px; margin-top:100px;">
 
 
             <?php
+            include 'medicinesearch.php';
 
 
-            ini_set('display_errors', '1');
-            ini_set('display_startup_errors', '1');
-            error_reporting(E_ALL & ~E_WARNING);
-            // include 'dbconnection.php';
+            // ini_set('display_errors', '1');
+            // ini_set('display_startup_errors', '1');
+            // error_reporting(E_ALL & ~E_WARNING);
+            // // include 'dbconnection.php';
             
 
-            // Create connection
-            $conn = new mysqli('localhost', 'root', '', 'signup');
-            // Check connection
-            if ($conn->connect_error) {
-              die("Connection failed: " . $conn->connect_error);
-            }
-            $medicine_name = $_POST["msubmit"];
+            // // Create connection
+            // $conn = new mysqli('localhost', 'root', '', 'signup');
+            // // Check connection
+            // if ($conn->connect_error) {
+            //   die("Connection failed: " . $conn->connect_error);
+            // }
+            // $medicine_name = $_POST["msearch"];
 
-            $sql = "SELECT medicinename,mrp,uses,alternatemedicines,sideeffect,howitwork FROM medicine WHERE medicinename = '$medicine_name'";
-            $result = $conn->query($sql);
+            // $sql = "SELECT * FROM medicine WHERE medicinename = '$medicine_name'";
+            // $result = $conn->query($sql);
 
-            if ($result->num_rows > 0) {
-              // output data of each row
-              while ($row = $result->fetch_assoc()) {
-                echo "<div style='font-size: 12px; padding:5px'>";
-                echo "<br> Name: " . $row["medicinename"] . " <br><br>MRP: " . $row["mrp"] . "<br><br>Uses:" . $row["uses"] . "<br><br>Alternatemedicines:" . $row["alternatemedicines"] . "<br><br>Sideeffect:" . $row["sideeffect"] . "<br><br>How It Work:" . $row["howitwork"] . "<br>";
-                echo "</div>";
-              }
-            } else {
-              echo "<div style='font-size: 16px; padding:5px'>";
-              echo "0 results";
-              echo "</div>";
-            }
+            // if ($result->num_rows > 0) {
+            //   // output data of each row
+            //   while ($row = $result->fetch_assoc()) {
+            //     echo "<div style='font-size: 12px; padding:0px 5px 5px 5px'>";
+            //     echo "<br> <b>Name:</b> " . $row["medicinename"] . "<br><br> <b>Salts Used:</b> " . $row["salt"] ." <br><b>MRP:</b> ₹" . $row["mrp"] . "<br><b>Uses:</b> " . $row["uses"] . "<br><br><b>Alternate medicines:</b> " . $row["alternatemedicines"] . "<br><br><b>Side effect:</b> " . $row["sideeffect"] ."<br> <b>How to Use: </b> " . $row["howtouse"] . "<br><br><b>How It Work:</b> " . $row["howitworks"] . "<br>";
+            //     echo "</div>";
+            //   }
+            // } else {
+            //   echo "<div style='font-size: 16px; padding:5px'>";
+            //   echo "0 results";
+            //   echo "</div>";
+            // }
 
-            $conn->close();
-            ?>
+            // $conn->close();
+            // ?>
 
           </div>
 
@@ -152,15 +154,15 @@
 
         </div>
       </div>
+    </div>
 
 
 
 
 
 
-
-
-
+  </form><br/>
+  <form style:"position:absolute;"; action='feedback.php' method='post' class='feedbackmain'>
       <div id="feed" class="feedback">
         <img class="photo-3-1" alt="" src="./public/photo-3-1@2x.png" />
 
@@ -187,35 +189,9 @@
 
         <b class="copyright-by-baymax">Copyright© by BayMax Care</b>
       </div>
-    </div>
+    
+  </form>
+    
 </body>
 
 </html>
-
-<?php
-// include 'dbconnection.php';
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "signup";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-$name = $_POST["yourname"];
-$phone = $_POST["phonenumber"];
-$feed = $_POST["feedback"];
-$sql = "INSERT INTO feedbacks (nam, contact_number, feedback)
-VALUES ('$name', '$phone', '$feed')";
-
-if ($conn->query($sql) === TRUE) {
-  echo "";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
-
-$conn->close();
-?>

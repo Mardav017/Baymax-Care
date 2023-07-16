@@ -18,11 +18,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
    if($data)
     {
-        header("Location:http://localhost/Project/login/login.php");
+        header("Location:http://localhost/Baymax%20Care/login/login.php");
     }
     else
     {
-        echo "Data insertion failed!!!! Please try again";
+        echo "<script>alert('Data insertion failed!!!! Please try again')</script>";
         header("Location:http://localhost/signup/signup.php");
     }
 

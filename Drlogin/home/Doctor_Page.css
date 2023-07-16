@@ -135,7 +135,7 @@ body {
 .vector-icon1 {
   position: absolute;
   height: 5.81%;
-  width: 3.36%;
+  width: 6.36%;
   top: 7.43%;
   right: 6.56%;
   bottom: 86.76%;
@@ -143,6 +143,15 @@ body {
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
+  color: #fff;
+  background-color: #0d264f;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.vector-icon1 a:visited {
+  text-decoration: none;
+  color: #ffffff;
 }
 .welcome-doctor {
   position: absolute;
@@ -332,8 +341,8 @@ body {
 .form {
   position: absolute;
   margin: 0 !important;
-  top: 381px;
-  left: 106px;
+  top: 331px;
+  left: 66px;
   width: 590px;
   height: 108px;
   flex-shrink: 0;

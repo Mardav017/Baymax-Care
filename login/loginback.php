@@ -20,16 +20,16 @@ $conn = new mysqli('localhost','root','','signup');
                 $_SESSION['mail']=$data['mail'];
         
                 //header("Location: demo.php");
-                header("Location:http://localhost/Project/User%20page/user_homepage.php");
+                header("Location:http://localhost/Baymax%20Care/login/home/user_homepage.php");
             }
             else{
-                header("Location:http://localhost/Project/login/login.php");
+                header("Location:http://localhost/Baymax%20Care/login/login.php");
 
                 exit();
             }
         }
     else{    
-        header("Location:http://localhost/Project/login/login.php");
+        header("Location:http://localhost/Baymax%20Care/login/login.php");
         exit();
     }
  }

@@ -9,21 +9,23 @@
     <script src="tailwindcss.css"></script>
 </head>
 <body class="bg-[#e0f2fe]">
-    <form  action="loginback.php" method="POST">
     <section class="absolute bg-sky-100 text-[#0d264f]" style="background-size:90%; width:100%;">
         <nav class="flex justify-between mt-0 m-7 pt-5 p-2">
             <div class="flex">
-                <img class=" h-16 w-16" src="/Image/baymax.png" alt="logo">
-                <h1 class="py-4 mx-3 text-xl font-bold">BayMax Care</h1>
+                <img class=" h-16 w-16" src="Image/baymax.png" alt="logo">
+                <a href="../index.php"<h1 class="py-4 mx-3 text-xl font-bold">BayMax Care</h1></a>
             </div>
-    
             
-    
+            
+            
             <div>
-        
+                <button class='border rounded-xl p-2 bg-[#0d264f]'><a href="../signup/signup.php" class="text-[#fff]">SignUp</a></button>
+                
+                
             </div>
         </nav>
-
+        
+        <form  action="loginback.php" method="POST">
         <div class="py-8">
         
             <div class="text-[#4f2474] rounded-lg bg-white shadow-2xl fixed mt-0 pl-60 pt-4" style="height:61%; width:60%; left: 20%;">
@@ -36,9 +38,9 @@
                     
                     <input type="submit" class="cursor-pointer text-white font-semibold bg-[#0d264f] hover:bg-[#4f2474] rounded-lg border w-20 h-10 mt-4 mb-8 mx-28" value="log In" name="login"><br>
     
-                    Don't have a account?<input type="submit" class="cursor-pointer text-white font-semibold bg-[#0d264f] hover:bg-[#4f2474] rounded-lg border w-36 h-10 my-2 ml-7" value="Create Account" name="createacc">
+    </form>
+                    Don't have a account?<a href="../signup/signup.php" class="cursor-pointer text-white font-semibold bg-[#0d264f] hover:bg-[#4f2474] rounded-lg border p-2 w-36 h-14 my-2 ml-7">Create Account</a>
                     
-                </form>
                 
                 
                 
